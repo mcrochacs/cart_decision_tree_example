@@ -11,4 +11,11 @@ model = DecisionTreeClassifier()
 model.fit(dataset.data, dataset.target)
 print(model)
 
-# Make Predictions...
+# Make Predictions
+expected = dataset.target
+predicted = model.predict(dataset.data)
+
+# Summarize the fit of the model
+print(metrics.classification_report(expected, predicted))
+print(metrics.confusion_matrix(expected, predicted))
+
