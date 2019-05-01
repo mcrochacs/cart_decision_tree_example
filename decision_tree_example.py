@@ -13,7 +13,8 @@ print(" ")
 
 
 # Load the Iris Datasets 2
-dataset2 = pandas.read_csv("iris_data.csv")
+names = ['sepal-lenght', 'sepal-width', 'petal-length', 'petal-width', 'class']
+dataset2 = pandas.read_csv("iris_data.csv", names=names)
 print("<<<<< Second Dataset - with pandas >>>>>")
 print(dataset2.shape)
 print(dataset2.head(20))
